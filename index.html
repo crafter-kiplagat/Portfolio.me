@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | Portfolio</title>
+  <meta name="description" content="Portfolio of Denis, web developer." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="#home" class="logo">Kemei<span>.</span></a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="icon-btn menu-btn" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1>Denis Kiplagat</h1>
+        <p class="typing">I'm a <span id="typed-text"></span><span class="cursor">|</span></p>
+        <p class="hero-sub">I build clean, fast and accessible websites that people enjoy using.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View my work</a>
+          <a href="#contact" class="btn btn-outline">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-photo reveal" aria-hidden="true">YN</div>
+        <div class="reveal">
+          <h2 class="section-title">About me</h2>
+          <p>
+            I'm a web developer based in Kenya with a passion for turning ideas into
+            polished digital products. I enjoy working across the stack, from crafting
+            responsive interfaces to building the logic behind them.
+          </p>
+          <p>
+            When I'm not coding, you'll find me learning something new, reading, or
+            exploring new tools that make development more fun.
+          </p>
+          <a href="#" class="btn btn-primary" download>Download CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section alt" id="skills">
+      <div class="container">
+        <h2 class="section-title center reveal">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill reveal">
+            <div class="skill-head"><span>HTML</span><span>90%</span></div>
+            <div class="bar"><div class="bar-fill" data-level="90"></div></div>
+          </div>
+          <div class="skill reveal">
+            <div class="skill-head"><span>CSS</span><span>85%</span></div>
+            <div class="bar"><div class="bar-fill" data-level="85"></div></div>
+          </div>
+          <div class="skill reveal">
+            <div class="skill-head"><span>JavaScript</span><span>80%</span></div>
+            <div class="bar"><div class="bar-fill" data-level="80"></div></div>
+          </div>
+          <div class="skill reveal">
+            <div class="skill-head"><span>Python</span><span>70%</span></div>
+            <div class="bar"><div class="bar-fill" data-level="70"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title center reveal">Projects</h2>
+
+        <div class="filters reveal" role="group" aria-label="Filter projects">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="web">Web</button>
+          <button class="filter" data-filter="app">Apps</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="card reveal" data-category="web">
+            <div class="card-img c1">🌐</div>
+            <div class="card-body">
+              <h3>Business Website</h3>
+              <p>A responsive marketing site with a contact form and fast load times.</p>
+              <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+              <a href="#" class="card-link">View project →</a>
+            </div>
+          </article>
+
+          <article class="card reveal" data-category="app">
+            <div class="card-img c2">✅</div>
+            <div class="card-body">
+              <h3>Task Manager</h3>
+              <p>A to-do app with local storage, filters and drag-free simple UX.</p>
+              <div class="tags"><span>JavaScript</span><span>LocalStorage</span></div>
+              <a href="#" class="card-link">View project →</a>
+            </div>
+          </article>
+
+          <article class="card reveal" data-category="app">
+            <div class="card-img c3">🏦</div>
+            <div class="card-body">
+              <h3>Banking CLI</h3>
+              <p>A command-line deposit and balance tracker with input validation.</p>
+              <div class="tags"><span>Python</span></div>
+              <a href="#" class="card-link">View project →</a>
+            </div>
+          </article>
+
+          <article class="card reveal" data-category="web">
+            <div class="card-img c4">🎨</div>
+            <div class="card-body">
+              <h3>Portfolio Template</h3>
+              <p>A clean, theme-able portfolio template, which you're looking at now.</p>
+              <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+              <a href="#" class="card-link">View project →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section alt" id="contact">
+      <div class="container contact-wrap">
+        <h2 class="section-title center reveal">Get in touch</h2>
+        <p class="center muted reveal">Have a project in mind or just want to say hi? Send me a message.</p>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" />
+            <small class="error" data-for="name"></small>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" />
+            <small class="error" data-for="email"></small>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+            <small class="error" data-for="message"></small>
+          </div>
+          <button type="submit" class="btn btn-primary">Send message</button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Denis. All rights reserved.</p>
+      <ul class="socials">
+        <li><a href="#" aria-label="GitHub">GitHub</a></li>
+        <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+        <li><a href="#" aria-label="Twitter">Twitter</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <button class="to-top" id="to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
